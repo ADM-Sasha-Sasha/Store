@@ -1,5 +1,11 @@
 package HwDev.products;
 
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@AllArgsConstructor
+@Data
 public class ProductsListImplement {
     private String id;
     private double productPrice;
@@ -9,9 +15,6 @@ public class ProductsListImplement {
     public ProductsListImplement(String id, double productPrice) {
         this (id, productPrice, 1, productPrice);
     }
-
-//    public ProductsListImplement(String id, double productPrice, int salesProductCount, double salesProductPrice) {
-//    }
 
     public double getProductPrice (long count) {
         if (count < 1) {
